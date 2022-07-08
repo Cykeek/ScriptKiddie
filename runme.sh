@@ -17,16 +17,20 @@ case $answer in
         echo "Running debian.sh";
         sleep 2s;
         echo "";
-        bash debian.sh | lolcat;
+        bash debian.sh;
         sleep 2s;
         break;;
         arch)echo "";
         echo "You Choosed Arch Platform";
         echo "";
+        echo "Downloading necessary files!!!";
+        pacman -Syy && pacman -Syu;
+        pacman -S lolcat;
+        pacman -S megatools;
         echo "Running arch.sh";
         sleep 2s;
         echo "";
-        bash arch.sh | lolcat;
+        bash arch.sh;
         sleep 2s;
         break;;
         android)echo"";
@@ -45,3 +49,4 @@ case $answer in
         echo "Error!! Maybe u used Uppercase or other strings !!";
         echo "";;
 esac
+done

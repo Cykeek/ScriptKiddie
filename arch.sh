@@ -2,8 +2,8 @@ echo "Download Cykeek Builds at one Place";
 echo "";
 sleep 2s;
 echo "Visit my github 'https://www.github.com/Cykeek/' for more works";
-echo "";
 sleep 2s;
+echo "";
 echo "=======================================" | lolcat
 echo "|     Choose the Following List       |" | lolcat
 echo "|                                     |" | lolcat
