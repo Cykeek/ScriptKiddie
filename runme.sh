@@ -1,0 +1,47 @@
+echo "";
+echo "Thanks for Downloading My script!!";
+echo "";
+sleep 2s;
+echo "Special Thanks to Shastik and DocFaizal for testing out this script !!";
+sleep 1s;
+echo "";
+while true; do
+read -p "Which Platform are u using r8 now ? (debian/arch/android)[!!Case sensitive!!]: " answer;
+case $answer in
+        debian)echo "";
+        echo "Your Choosed Debian Platform";
+        echo "";
+        echo "Downloading Required Files!!";
+        sudo apt-get install lolcat;
+        sudo apt-get install megatools;
+        echo "Running debian.sh";
+        sleep 2s;
+        echo "";
+        bash debian.sh | lolcat;
+        sleep 2s;
+        break;;
+        arch)echo "";
+        echo "You Choosed Arch Platform";
+        echo "";
+        echo "Running arch.sh";
+        sleep 2s;
+        echo "";
+        bash arch.sh | lolcat;
+        sleep 2s;
+        break;;
+        android)echo"";
+        echo "You Choosed Android Platform";
+        echo "";
+        echo "Downloading Required Files!!";
+        apt update && apt upgrade;
+        apt install megatools;
+        echo "Running termux.sh";
+        sleep 2s;
+        echo "";
+        bash termux.sh;
+        sleep 2s;
+        exit;;
+        *)echo "";
+        echo "Error!! Maybe u used Uppercase or other strings !!";
+        echo "";;
+esac
