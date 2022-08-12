@@ -1,4 +1,21 @@
 #!/bin/sh
+echo "==================================";
+sleep 1s;
+echo "|                                |";
+sleep 1s;
+echo "|                                |";
+sleep 1s;
+echo "|   This Script Made by Cykeek   |";
+sleep 1s;
+echo "|        Join @CykeekBuilds      |";
+sleep 1s;
+echo "|                                |";
+sleep 1s;
+echo "|                                |";
+sleep 1s;
+echo "|                                |";
+sleep 1s;
+echo "==================================";
 while true; do
 read -p "Are you inside the rom folder or outside? I/O :" options
 case $options in
