@@ -30,8 +30,33 @@ case $options in
 	echo "Fetching device_realme_RMX1851 from Github";
 	echo "";
 	sleep 1s;
-	git clone https://github.com/Cykeek/device_realme_RMX1851 device/realme/RMX1851/
-	echo "";
+	echo "==================================";
+	echo "|         Branches               |";
+	echo "|  *cherish(origin)              |";
+	echo "|  *voltage                      |";
+	echo "|  *pixel                        |";
+	echo "==================================";
+	read -p "Select your branches (1/2/3) :" branch
+	case $branch in
+		1)echo "";
+		git clone https://github.com/Cykeek/device_realme_RMX1851 device/realme/RMX1851/
+		echo "";
+		sleep 1s;
+		echo "Cherish(origin) branch synced!!";
+		echo "";;
+		2)echo "";
+		git clone https://github.com/Cykeek/device_realme_RMX1851 -b voltage device/realme/RMX1851/
+		echo "";
+		sleep 1s;
+		echo "voltage branch synced!!";
+		echo "";;
+		3)echo "";
+		git clone https://github.com/Cykeek/device_realme_RMX1851 -b pixel device/realme/RMX1851/
+		echo "";
+		sleep 1s;
+		echo "Pixel branch synced!!";
+		echo "";;
+	esac
 	sleep 1s;
 	echo "Fecthing device_realme_sdm710-common from Github";
 	echo "";
@@ -77,6 +102,6 @@ case $options in
 	sleep 1s;
 	echo "Script successfully executed!!";
 	echo "";
-	echo "stopping!!";
+	echo "stopping!!";;
 esac
 done
