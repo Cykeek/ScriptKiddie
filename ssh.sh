@@ -12,7 +12,10 @@ sleep 1s
 echo
 echo -e "\e[38;2;0;255;0mExecuting in 1!\e[0m"
 sleep 1s
-
+echo
+echo -e "While Connecting your SSH server you might be asked again for password"
+echo -e "just provide again from next time it won't ask."
+echo -e "Reason for this: \e[38;2;0;255;0mhttps://shorturl.at/pqrG1\e[0m"
 
 # Function to check if an IP address is valid
 is_valid_ip() {
@@ -83,6 +86,9 @@ ssh "$username@$server_ip"
 # Check the exit status of SSH
 if [ $? -eq 0 ]; then
     echo "Connected successfully."
+    echo -e "\u001b[33m;1mYour Connection credentials has been saved in # authentication.txt #\u001b[0m"
+    echo -e "\u001b[37;1mNext time no more Password prompts!!\u001b[0m"
 else
     echo "Failed to connect."
+    echo "\u001b[31m;1mCheck you credentials properly!!\u001b[0m"
 fi
